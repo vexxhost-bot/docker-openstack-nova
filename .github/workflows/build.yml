@@ -62,7 +62,7 @@ jobs:
           PROJECT_REF=${{ env.PROJECT_REF }}
           EXTRAS=
           PROFILES=ceph openvswitch configdrive qemu migration
-          DIST_PACKAGES=ovmf qemu-efi-aarch64 lsscsi nvme-cli sysfsutils udev util-linux ndctl
+          DIST_PACKAGES=ovmf qemu-efi-aarch64 lsscsi nvme-cli sysfsutils udev util-linux ndctl python3-libvirt
           PIP_PACKAGES=cryptography python-binary-memcached
         cache-from: type=gha,scope=${{ matrix.from }}-${{ matrix.release }}
         cache-to: type=gha,mode=max,scope=${{ matrix.from }}-${{ matrix.release }}
